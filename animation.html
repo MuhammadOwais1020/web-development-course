@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --linear-gradient: linear-gradient(45deg, #87ABFA, #78B2DE, #90E5F5, #78DED3, #87FACE);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: blueviolet;
+            background-image: var(--linear-gradient);
+            /* position: relative; */
+            background-size: 400%;
+
+            animation: bg-animation 20s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            width: 600px;
+            height: 200px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text h1 {
+            margin: 0;
+            font-size: 85px;
+            font-weight: bolder;
+
+            background-image: var(--linear-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+            background-size: 300%;
+
+            animation: bg-animation 5s infinite alternate
+        }
+
+        @keyframes bg-animation {
+            0% {
+                background-position: left;
+            }
+
+            100% {
+                background-position: right;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>QONKAR</h1>
+        </div>
+    </div>
+</body>
+
+</html>
